@@ -1,0 +1,25 @@
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {unzipSync,strFromU8} from 'fflate';
+import {feature,mesh} from 'topojson-client';
+import {geoEquirectangular,geoPath} from 'd3-geo';
+import sharp from 'sharp';
+await mkdir('assets',{recursive:true});
+const world=JSON.parse(await readFile('node_modules/world-atlas/countries-110m.json','utf8'));
+const projection=geoEquirectangular().scale(2048/(2*Math.PI)).translate([1024,512]);
+const path=geoPath(projection);
+const land=feature(world,world.objects.land);
+const outlines=mesh(world,world.objects.countries,(a,b)=>a!==b);
+const svg='<svg xmlns="http://www.w3.org/2000/svg" width="2048" height="1024"><rect width="2048" height="1024" fill="#0b2238"/><path d="'+path(land)+'" fill="#285064" stroke="#71a0b1" stroke-width="0.8"/><path d="'+path(outlines)+'" fill="none" stroke="#52788b" stroke-width="0.45"/></svg>';
+await sharp(Buffer.from(svg)).png().toFile('assets/earth.png');
+const zip=await readFile(process.env.TRAVEL_CITIES_ZIP||'/tmp/travel-globe-cities.zip');
+const raw=strFromU8(unzipSync(zip)['cities15000.txt']);
+const names={'Shanghai':'上海','Beijing':'北京','Tokyo':'东京','Kyoto':'京都','Osaka':'大阪','Paris':'巴黎','London':'伦敦','New York City':'纽约','Singapore':'新加坡','Hong Kong':'香港','Taipei':'台北','Seoul':'首尔','Bangkok':'曼谷','Sydney':'悉尼','Melbourne':'墨尔本','Rome':'罗马','Barcelona':'巴塞罗那','Berlin':'柏林','Lisbon':'里斯本','Dubai':'迪拜','Istanbul':'伊斯坦布尔','Guangzhou':'广州','Shenzhen':'深圳','Chengdu':'成都','Hangzhou':'杭州','Chongqing':'重庆','Nanjing':'南京','Wuhan':'武汉','Suzhou':'苏州','Xiamen':'厦门','Kunming':'昆明','Dali':'大理','Lijiang':'丽江'};
+const rows=raw.trim().split('\n').map(line=>line.split('\t')).sort((a,b)=>Number(b[14])-Number(a[14])).map(f=>{
+  const aliases=[f[1],f[2],...f[3].split(',').filter(v=>/^[\u3400-\u9fff]+$/.test(v)).slice(0,6)].filter(Boolean);
+  return [f[0],names[f[1]]||f[1],f[8],f[10],+f[4],+f[5],[...new Set(aliases)].join('|')];
+});
+await writeFile('assets/cities.json',JSON.stringify(rows));
+const assets={generatedDate:'2026-10-06',cities:rows.length,source:'https://download.geonames.org/export/dump/cities15000.zip',sourceZipSHA256:createHash('sha256').update(zip).digest('hex'),worldAtlasVersion:'2.0.2',textureSHA256:createHash('sha256').update(await readFile('assets/earth.png')).digest('hex')};
+await writeFile('assets/provenance.json',JSON.stringify(assets,null,2)+'\n');
+console.log(assets);

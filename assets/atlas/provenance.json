@@ -1,0 +1,127 @@
+{
+  "acquired": "2026-10-14",
+  "generated": "2026-10-14",
+  "description": "Travel Globe 基础暗蓝底图与全球国界、国家标注离线资产",
+  "source": {
+    "name": "Natural Earth Vector",
+    "authors": "Tom Patterson / Nathaniel Vaughn Kelso",
+    "version": "v5.1.2",
+    "commit": "ca96624a56bd078437bca8184e78163e5039ad19",
+    "repo": "https://github.com/nvkelso/natural-earth-vector",
+    "license": "Natural Earth Public Domain (https://www.naturalearthdata.com/about/terms-of-use/)",
+    "crs": "urn:ogc:def:crs:OGC:1.3:CRS84 (WGS84 longitude/latitude)"
+  },
+  "colorPalette": {
+    "land": "#141827",
+    "water": "#263D5D",
+    "river": "#437797",
+    "border": "#CE7084",
+    "label": "#BAC5D3"
+  },
+  "sources": [
+    {
+      "file": "ne_10m_land.geojson",
+      "role": "land polygons",
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_10m_land.geojson",
+      "bytes": 10157965,
+      "sha256": "1ac90796408bc6ad6911d69448485d3c4dbf2190370080368a09976e1c9f7416",
+      "crs": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    },
+    {
+      "file": "ne_10m_lakes.geojson",
+      "role": "lake polygons",
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_10m_lakes.geojson",
+      "bytes": 5043554,
+      "sha256": "2d036f53dedec578001c5c30c2959ee7d4eebc1306900fa4367c49929ec8f2d9",
+      "crs": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    },
+    {
+      "file": "ne_10m_rivers_lake_centerlines.geojson",
+      "role": "major river centerlines",
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_10m_rivers_lake_centerlines.geojson",
+      "bytes": 7307743,
+      "sha256": "bb854a900ecbd3b408df46d5e16e3e0f974ba55993f9d8b5c26e855273c0905a",
+      "crs": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    },
+    {
+      "file": "ne_10m_admin_0_boundary_lines_land.geojson",
+      "role": "international and land boundaries",
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_10m_admin_0_boundary_lines_land.geojson",
+      "bytes": 2284669,
+      "sha256": "74d9c16229c095fde65943a9919e337682f044bcebccb120764f38edf3b70f4a",
+      "crs": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    },
+    {
+      "file": "ne_10m_admin_0_boundary_lines_disputed_areas.geojson",
+      "role": "disputed, breakaway and claim boundary lines",
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_10m_admin_0_boundary_lines_disputed_areas.geojson",
+      "bytes": 183831,
+      "sha256": "69f19da764e6982b43aebae4b1a356ffe74c33f2a3cdb462637c0ba8e969c30b",
+      "crs": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    },
+    {
+      "file": "ne_10m_admin_0_countries.geojson",
+      "role": "country boundaries, labels and properties",
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_10m_admin_0_countries.geojson",
+      "bytes": 13287234,
+      "sha256": "239eec57ac17f100a11e2536cffc56752c318b50ae765b0918ff7aab4ce8f255",
+      "crs": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  ],
+  "outputs": [
+    {
+      "file": "assets/atlas/atlas-surface-8k.jpg",
+      "width": 8192,
+      "height": 4096,
+      "bytes": 2610366,
+      "sha256": "6d7aab0f30b4bab3454aa790dfe617deeaf8648e6ebcf86162e00520d05cc693"
+    },
+    {
+      "file": "assets/atlas/atlas-surface-high.jpg",
+      "width": 4096,
+      "height": 2048,
+      "bytes": 1041670,
+      "sha256": "84ac3762e68a3ab0b75b11c7d45bef6cd4f5a1c2c67620ff508ee56599ff3fca"
+    },
+    {
+      "file": "assets/atlas/atlas-surface-standard.jpg",
+      "width": 2048,
+      "height": 1024,
+      "bytes": 353447,
+      "sha256": "b83102b83d2f4c4b684dba942baf2b985ef0e3e3907ad9f063ff9908caca8976"
+    },
+    {
+      "file": "assets/atlas/atlas-surface-low.jpg",
+      "width": 1024,
+      "height": 512,
+      "bytes": 104373,
+      "sha256": "6f6eb35255774c3bd11ea7ca0a1039346f99dc249952ea812344142ae3449327"
+    },
+    {
+      "file": "assets/atlas/atlas-map.json",
+      "bytes": 1517909,
+      "sha256": "b5a258ed548877b1e13115c642dc822bd52d9ce9535cf093bee38d5415e1a527"
+    }
+  ],
+  "statistics": {
+    "borders": {
+      "totalLinesPerLod": 610,
+      "coordinates": {
+        "low": 5141,
+        "standard": 14291,
+        "high": 43719,
+        "total": 63151
+      },
+      "classificationCounts": {
+        "normal": 457,
+        "disputed": 111,
+        "indeterminate": 42
+      }
+    },
+    "labels": {
+      "count": 258,
+      "withNameZh": 258
+    }
+  },
+  "projection": "Equirectangular 2:1 (longitude -180..180, north +90 to south -90)"
+}

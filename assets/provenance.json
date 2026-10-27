@@ -1,0 +1,8 @@
+{
+  "generatedDate": "2026-10-06",
+  "cities": 34153,
+  "source": "https://download.geonames.org/export/dump/cities15000.zip",
+  "sourceZipSHA256": "5073d9575f4d4f34ab1eed62922b25c2c8a060cfb58fa7177eeb3c694cfc2a34",
+  "worldAtlasVersion": "2.0.2",
+  "textureSHA256": "8d4baf0daddc217b9deeff0c9602bcc723eba16f4504898f0dd2d73e8fcbc989"
+}

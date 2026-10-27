@@ -1,0 +1,141 @@
+{
+  "acquired": "2026-10-06",
+  "projection": "Equirectangular; left -180°, right +180°, top +90°, bottom -90°. No crop, flip, longitude shift or recoloring.",
+  "license": "NASA Images and Media Usage Guidelines; acknowledge NASA, no endorsement implied. GEBCO attribution retained.",
+  "policy": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "sources": [
+    {
+      "kind": "surface",
+      "file": "assets/upstream/nasa-blue-marble-200407-5400.jpg",
+      "url": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/bmng/bmng-topography/july/world.topo.200407.3x5400x2700.jpg",
+      "credit": "NASA Earth Observatory / Reto Stöckli; MODIS, July 2004",
+      "width": 5400,
+      "height": 2700,
+      "sha256": "85a24885616097b5e06532b7d8e30fa5d749a782e70ea55971dd8539a0899206"
+    },
+    {
+      "kind": "height",
+      "file": "assets/upstream/nasa-topography-5400.jpg",
+      "url": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/bmng/topography/gebco_08_rev_elev_5400x2700.jpg",
+      "credit": "NASA Earth Observatory / Jesse Allen, GEBCO; grayscale 0–6400 m",
+      "width": 5400,
+      "height": 2700,
+      "sha256": "97828a87bcb6549a527232455e478c5f9e4556f761b37d620a46446da17593ab"
+    },
+    {
+      "kind": "clouds",
+      "file": "assets/upstream/nasa-clouds-2048.jpg",
+      "url": "https://eoimages.gsfc.nasa.gov/images/imagerecords/57000/57747/cloud_combined_2048.jpg",
+      "credit": "NASA Goddard / Reto Stöckli; Blue Marble cloud composite, published 2002",
+      "width": 2048,
+      "height": 1024,
+      "sha256": "daddaad84d7a33bbbc86cdda3f591099f57cee8607b7bcf3b67eb7e4f7a1c793"
+    },
+    {
+      "kind": "clouds-hd",
+      "file": "assets/upstream/nasa-clouds-8192.tif",
+      "url": "https://eoimages.gsfc.nasa.gov/images/imagerecords/57000/57747/cloud_combined_8192.tif",
+      "credit": "NASA Goddard / Reto Stöckli; Blue Marble cloud composite, published 2002",
+      "width": 8192,
+      "height": 4096,
+      "sha256": "d137775d8966ab8d443fd5126dc6e7ad72072bc1ed50555c5818d221735daf0f",
+      "acquired": "2026-10-07"
+    },
+    {
+      "kind": "surface-8k",
+      "file": "assets/upstream/nasa-blue-marble-200407-21600.jpg",
+      "url": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/bmng/bmng-topography/july/world.topo.200407.3x21600x10800.jpg",
+      "credit": "NASA Earth Observatory / Reto Stöckli; MODIS, July 2004",
+      "width": 21600,
+      "height": 10800,
+      "sha256": "40a42c4511ccfbcdc6928d026a50da190e718772c7e6141ebd4ee9dbe946eda8"
+    }
+  ],
+  "outputs": [
+    {
+      "file": "assets/realistic/surface-low.jpg",
+      "width": 1024,
+      "height": 512,
+      "bytes": 130831,
+      "sha256": "3f74baa24b1abc8702027a5fe0eabc5fb9bbb9c6b2b324a32333fb02de58a9d3"
+    },
+    {
+      "file": "assets/realistic/surface-standard.jpg",
+      "width": 2048,
+      "height": 1024,
+      "bytes": 449798,
+      "sha256": "ebeb4c4c1358ca3ca8c25ca72f4e2478d8e8fb2dd574d8adf47be6dd1443051e"
+    },
+    {
+      "file": "assets/realistic/surface-high.jpg",
+      "width": 4096,
+      "height": 2048,
+      "bytes": 1506318,
+      "sha256": "9fdd1838ea2838a8e8390a80e8cbcb20d41b43a75ccedf6eda84fc2e4875ccc2"
+    },
+    {
+      "file": "assets/realistic/height-low.png",
+      "width": 1024,
+      "height": 512,
+      "bytes": 177753,
+      "sha256": "50c3472f3f55161c5d87f78d842200d469be5fb9a4be3c6d46a47045a144dc5f"
+    },
+    {
+      "file": "assets/realistic/height-standard.png",
+      "width": 2048,
+      "height": 1024,
+      "bytes": 601558,
+      "sha256": "d696e97074b2bccb24acbe4b9641600274fd34a403fb921039fe0ce313201874"
+    },
+    {
+      "file": "assets/realistic/height-high.png",
+      "width": 4096,
+      "height": 2048,
+      "bytes": 2116967,
+      "sha256": "2a276f755e2699be0d53c8b65d9337c5b5cdce395d6ea6c91278ec080089a154"
+    },
+    {
+      "file": "assets/realistic/clouds-hd-low.png",
+      "width": 1024,
+      "height": 512,
+      "bytes": 454321,
+      "sha256": "8483babac5a1204bfc7c57ef386c46f5534372704dd82997910f8c518291a986"
+    },
+    {
+      "file": "assets/realistic/clouds-hd-standard.png",
+      "width": 2048,
+      "height": 1024,
+      "bytes": 1755707,
+      "sha256": "c61204134aedb31a6915ab373ef24194476d9582ed66f2d83b34a280be8e7880"
+    },
+    {
+      "file": "assets/realistic/clouds-hd-high.png",
+      "width": 4096,
+      "height": 2048,
+      "bytes": 6754614,
+      "sha256": "d85077565d8ba11c0bd558f21577ded1a0fbd48ea1edd2c27f1071421e64935e"
+    },
+    {
+      "file": "assets/realistic/clouds-hd-8k.png",
+      "width": 8192,
+      "height": 4096,
+      "bytes": 25328412,
+      "sha256": "3541681e499d949091f2c57ba99c464c267f7c19fa11179c49285bb92d53d4e0"
+    },
+    {
+      "file": "assets/realistic/surface-8k.jpg",
+      "width": 8192,
+      "height": 4096,
+      "bytes": 5806924,
+      "sha256": "0119d9b04775dfa5caafa5a7ca294528c16c7e9f5fff96332a187f6a73a2819a"
+    }
+  ],
+  "borders": {
+    "file": "assets/realistic/borders.json",
+    "source": "world-atlas 2.0.2 / Natural Earth 110m",
+    "license": "Natural Earth public domain; world-atlas ISC",
+    "sha256": "2cca840704005b755773fdc4e755e193df121aaa5abd585761f4d41f35f5196b",
+    "note": "Illustrative internal country boundaries; does not determine record region or settle disputed borders."
+  },
+  "generated": "2026-10-07"
+}

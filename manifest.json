@@ -1,0 +1,9 @@
+{
+  "id": "travel-globe",
+  "name": "Travel Globe",
+  "version": "0.9.1",
+  "minAppVersion": "1.5.0",
+  "description": "用离线三维地球记录城市、旅行足迹与 Markdown 回忆。",
+  "author": "Travel Globe contributors",
+  "isDesktopOnly": false
+}

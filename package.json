@@ -1,0 +1,40 @@
+{
+  "name": "obsidian-travel-globe",
+  "version": "0.9.1",
+  "private": true,
+  "description": "Offline 3D travel journal for Obsidian",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node esbuild.config.mjs --watch",
+    "build": "tsc --noEmit && node esbuild.config.mjs",
+    "test": "node --import tsx --test --test-concurrency=1 tests/*.test.ts tests/*.test.mjs",
+    "test:recovery": "node --test --test-concurrency=1 tests/surface-recovery.test.mjs tests/mobile-controls.test.mjs",
+    "test:installer": "node --test tests/installer-rollback.test.mjs",
+    "prepackage": "npm run build",
+    "package": "node scripts/package.mjs",
+    "assets": "node scripts/build-assets.mjs",
+    "assets:realistic": "node scripts/build-realistic-assets.mjs"
+  },
+  "dependencies": {
+    "cesium": "1.146.0",
+    "globe.gl": "^2.45.0",
+    "three": "^0.183.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/three": "^0.183.0",
+    "d3-geo": "^3.1.1",
+    "esbuild": "^0.25.0",
+    "fflate": "^0.8.2",
+    "obsidian": "latest",
+    "playwright": "^1.56.0",
+    "sharp": "^0.35.5",
+    "topojson-client": "^3.1.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0",
+    "world-atlas": "2.0.2"
+  },
+  "overrides": {
+    "moment": "2.31.0"
+  }
+}
